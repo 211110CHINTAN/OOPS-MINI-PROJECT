@@ -120,3 +120,68 @@ void output(patientdata *p)
 	cout<<"\n   Bed number       : "<<p->bedno;
 	cout<<"\n\n *********************************************************";
 }
+void Hospital :: insertatbeg()
+{
+     patientdata*p=new patientdata();
+     *p=input();
+     if(p->ID==0)
+     return;
+
+     if(head==NULL)
+
+     {
+         head=p;
+         last=p;
+         p->next=NULL;
+     }
+     else
+     {
+        p->next=head;
+        head=p;
+     }
+     system("cls");
+     cout << "\n\tPatient added:";
+     output(p);
+}
+void Hospital:: insertatend()
+{
+     patientdata*p=new patientdata();
+     *p=input();
+     if(p->ID==0)
+     return;
+
+     if(head==NULL)
+     {
+     	head=p;
+        last=p;
+        p->next=NULL;
+     }
+     else
+     {
+     	p->next=NULL;
+        last->next=p;
+        last=p;
+     }
+     system("cls");
+     cout<<"\n  *****************************************************\n";
+     cout<<"\n  ||      -- HOSPITAL MANAGEMENT SYSTEM --           ||";
+     cout<<"\n  *****************************************************\n";
+     cout <<"\n  ----------PATIENT ADDED SUCCESSFULY -----------";
+     output(p);
+}
+void Hospital :: getpatientoperate()
+{
+	 system("cls");
+     if(head==NULL)
+     {
+     	cout<<"\n  No Patient to operate";
+     }
+     else
+     {
+     	patientdata*p=new patientdata();
+     	p=head;
+     	head=head->next;
+ 	    cout << "\n  Patient to operate:";
+        output(p);
+ 	 }
+}
