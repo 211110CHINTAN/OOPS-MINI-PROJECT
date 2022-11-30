@@ -33,6 +33,36 @@ class Hospital
     int search(int);
     char departmentname[50];
 };
+int Hospital :: search(int item)
+{
+	 if(head==NULL)
+     return false;
+     else
+     {
+     int flag=0;
+     patientdata*p=new patientdata();
+     p=head;
+
+     while( p->next!=NULL && p->ID!=item )
+     {
+        p=p->next;
+     }
+     if(p->ID==item)
+     {
+	 	flag=1;
+	 	return true;
+     }
+     if(flag==0)
+     return false;
+     }
+}
+
+int readnumber()
+{
+   char b[20];
+   cin.getline(b, sizeof(b));
+   return atoi(b);
+}
 
 patientdata Hospital :: input()
 {
@@ -75,4 +105,18 @@ patientdata Hospital :: input()
 		cout << "\n   Data not valid. Operation cancelled.";
 	}
 	return *p;
+}
+void output(patientdata *p)
+{
+	cout<<"\n  *********************************************************";
+	cout<<"\n   Patient data:\n";
+	cout<<"\n   First Name         : "<<p->first_name;
+	cout<<"\n   Last Name          : "<<p->last_name;
+	cout<<"\n   Gender             : "<<p->gender;
+	cout<<"\n   Age                : "<<p->age;
+	cout<<"\n   Blood Group        : "<<p->blood;
+	cout<<"\n   Mobile Number      : "<<p->ID;
+    cout<<"\n   ward number      : "<<p->wardno;
+	cout<<"\n   Bed number       : "<<p->bedno;
+	cout<<"\n\n *********************************************************";
 }
