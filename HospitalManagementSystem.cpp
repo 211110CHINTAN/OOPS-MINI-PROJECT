@@ -234,3 +234,53 @@ void Hospital :: getpatienttoout()
         cout<<"Your bill is: "<<day*billperday<<endl;
  	 }   
 }
+void departmentmenu (Hospital * q)
+{
+    int choice = 0, success;
+    patientdata p;
+    while (choice != 6)
+	{
+    system("cls");
+    cout<<"\n  *******************************************";
+    cout<<"\n  ||   -- HOSPITAL MANAGEMENT SYSTEM --    ||";
+    cout<<"\n  *******************************************";
+	cout<<"\n\n   "<<q->departmentname;
+	cout<<"\n [1] Add normal patient        \n";
+	cout<<"   [2] Add critically ill patient\n";
+	cout<<"   [3] Take patient to Doctor    \n";
+	cout<<"   [4] Display list              \n";
+    cout<<"   [5] take patient out          \n";
+	cout<<"   [6] Change department or exit \n";
+	cout<<"\n   Please enter your choice : ";
+	choice=readnumber();
+	cout<<"  ***************************************************";
+
+    switch (choice)
+	{
+	  case 1:	q->insertatend();
+				cout << "\n   Press any key";
+	    		getch();
+	 			break;
+
+      case 2:	q->insertatbeg();
+	    		cout << "\n   Press any key";
+	    		getch();
+				break;
+
+      case 3:	q->getpatientoperate();
+	 			cout<<"\n   Press any key";
+     			getch();
+	      		break;
+
+      case 4:	q->listofpatients();
+	 			cout<<"\n   Press any key";
+	 			getch();
+				break;
+      case 5:	system("cls");
+                q->getpatienttoout();
+	 			cout<<"\n   Press any key";
+     			getch();
+	      		break;
+	 }
+    }
+}
