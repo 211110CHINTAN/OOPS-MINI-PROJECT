@@ -284,3 +284,37 @@ void departmentmenu (Hospital * q)
 	 }
     }
 }
+int main ()
+{
+    int i, choice = 0;
+	Hospital departments[5];
+
+	while(choice!=6)
+	{
+		strcpy(departments[0].departmentname,"GENERAL STORE\n");
+		strcpy(departments[1].departmentname,"ORTHOPAEDIC CLINIC\n");
+		strcpy(departments[2].departmentname,"LUNG CLINIC\n");
+		strcpy(departments[3].departmentname,"DENTIST CLINIC\n");
+        strcpy(departments[4].departmentname,"HEART CLINIC\n");
+		system("cls");
+		cout<<"\n  **********************************************";
+		cout<<"\n  ||  ---- HOSPITAL MANAGEMENT SYSTEM ----    ||";
+		cout<<"\n  **********************************************\n\n";
+		cout<<"   Main Menu\n\n";
+		for (i = 0; i < 5; i++)
+		{
+			cout<<"   "<<(i+1)<<": "<<departments[i].departmentname;
+		}
+		cout<<"   6: Exit";
+		cout<<"\n\n   Please enter your choice  : ";
+		choice=readnumber();
+		if(choice>=1 && choice<=5)
+		{
+			departmentmenu(&departments[choice-1]);
+		}
+
+	}
+	if(choice==6)
+	cout<<"\n\t\tThank you! \n";
+	exit(0);
+}
