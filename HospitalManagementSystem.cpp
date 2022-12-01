@@ -185,3 +185,52 @@ void Hospital :: getpatientoperate()
         output(p);
  	 }
 }
+void Hospital :: listofpatients()
+{
+     if(head==NULL)
+     {
+     	cout<<"\n  No patient";
+ 	 }
+ 	      system("cls");
+     cout<<"\n  ********************************************\n";
+     cout<<"\n  ||   -- HOSPITAL MANAGEMENT SYSTEM --     ||";
+     cout<<"\n  ********************************************\n";
+     patientdata*p=new patientdata;
+     p=head;
+     while(p!=NULL)
+     {
+        cout<<"\n   Patient data:\n";
+		cout<<"\n   First Name       : "<<p->first_name;
+		cout<<"\n   Last Name        : "<<p->last_name;
+		cout<<"\n   Gender           : "<<p->gender;
+        cout<<"\n   Age              : "<<p->age;
+        cout<<"\n   Blood Group      : "<<p->blood;
+		cout<<"\n   Mobile Number    : "<<p->ID;
+        cout<<"\n   ward number      : "<<p->wardno;
+		cout<<"\n   Bed number       : "<<p->bedno;
+		cout<<"\n\n  **************************************************\n"<<endl;
+        p=p->next;
+     }
+     cout<<"\n";
+}
+void Hospital :: getpatienttoout()
+{
+    system("cls");
+     if(head==NULL)
+     {
+     	cout<<"\n  No Patient to out";
+     }
+     else
+     {
+     	patientdata*p=new patientdata();
+     	p=head;
+     	head=head->next;
+ 	    cout << "\n  Patient to out:"<<endl;
+        output(p);
+        int day, billperday=500;
+        cout<<"\n\nEnter the number day patient admit:"; 
+        cin>>day;
+        cout<<"Please pay your bill :"<<endl;
+        cout<<"Your bill is: "<<day*billperday<<endl;
+ 	 }   
+}
