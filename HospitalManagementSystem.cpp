@@ -69,12 +69,12 @@ patientdata Hospital :: input()
     int flag=0;
    patientdata *p=new patientdata();
    cout << "\n   Please enter data for patient\n";
-   cout<<"\n   First name     : ";
+   cout<<"\n   First name            : ";
    getline(cin,p->first_name);
-   cout << "   Last name      : ";
+   cout << "   Last name             : ";
    getline(cin,p->last_name);
    again :
-   cout << "   Blood Group    : ";
+   cout << "   Blood Group           : ";
    cin>>p->blood;
    if((strcmp(p->blood,"A+")==0)||(strcmp(p->blood,"a+")==0)||(strcmp(p->blood,"A-")==0)||(strcmp(p->blood,"a-")==0)||
       (strcmp(p->blood,"B+")==0)||(strcmp(p->blood,"b+")==0)||(strcmp(p->blood,"B-")==0)||(strcmp(p->blood,"b-")==0)||
@@ -87,15 +87,15 @@ patientdata Hospital :: input()
         goto again;
 
     }
-   cout<<"   Gender(M/F)         :- ";
+   cout<<"   Gender(M/F)           :- ";
    cin>>p->gender;
-   cout<<"   Age                 :- ";
+   cout<<"   Age                   :- ";
    cin>>p->age;
-   cout<<"   Mobile number       :- ";
+   cout<<"   Mobile number         :- ";
    cin>>p->ID;
-   cout<<" Enter the ward number :-";
+   cout<<"   Enter the ward number :-";
    cin>>p->wardno;
-   cout<<" Enter the bed number  :-";
+   cout<<"   Enter the bed number  :-";
    cin>>p->bedno;
 
 
@@ -116,8 +116,8 @@ void output(patientdata *p)
 	cout<<"\n   Age                : "<<p->age;
 	cout<<"\n   Blood Group        : "<<p->blood;
 	cout<<"\n   Mobile Number      : "<<p->ID;
-    cout<<"\n   ward number      : "<<p->wardno;
-	cout<<"\n   Bed number       : "<<p->bedno;
+    cout<<"\n   ward number        : "<<p->wardno;
+	cout<<"\n   Bed number         : "<<p->bedno;
 	cout<<"\n\n *********************************************************";
 }
 void Hospital :: insertatbeg()
@@ -183,6 +183,9 @@ void Hospital :: getpatientoperate()
      	head=head->next;
  	    cout << "\n  Patient to operate:";
         output(p);
+        int initial_payment=5000;
+        cout<<"\nPlease pay your initial payment :"<<endl;
+        cout<<"\nYour initial bill is: "<<initial_payment<<endl;
  	 }
 }
 void Hospital :: listofpatients()
@@ -291,7 +294,7 @@ int main ()
 
 	while(choice!=6)
 	{
-		strcpy(departments[0].departmentname,"GENERAL STORE\n");
+		strcpy(departments[0].departmentname,"CNACER PATIENT\n");
 		strcpy(departments[1].departmentname,"ORTHOPAEDIC CLINIC\n");
 		strcpy(departments[2].departmentname,"LUNG CLINIC\n");
 		strcpy(departments[3].departmentname,"DENTIST CLINIC\n");
