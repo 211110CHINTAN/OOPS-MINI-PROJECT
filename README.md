@@ -3,8 +3,24 @@ HOSPITAL MANAGEMENT SYSTEM in C++
 
 About Project
 
-Hospital Management System is based on a concept of recording patient records and their diagnosis information. Before stepping into the main system a user has to pass through a login system to get access, then only the user can add a new patient record, diagnosis information and check the full history of the patient. This mini project contains limited features, but the essential one.
-Talking about the features of the Hospital Management System, after logging in as a user he/she can add new patient records, diagnosis information, check patient information, and view information about the hospital. To delete a record, the user has to delete the file from the project folder as this project focuses on adding and retrieving files. While adding a patient record, he/she has to provide the details which includes the name of the patient, address, contact number, age, sex, blood group, disease name and patient id number. Similarly, in adding diagnosis information of a particular patient then he/she has to select the respective patient’s file and provide symptoms, Diagnosis, ask admission, and ward type. The user can view patients history easily as which displays each and every detail of the patient.
+1-Hospital Management System is based on a concept of recording patient records and their diagnosis information. 
+
+2-This program is open to all hospital users without the need for login information in this program.
+
+3-The system user can select the category in which they specialize by simply entering a series of numeric keys. 
+
+4-This mini project contains limited features, but the essential one.
+
+5-Talking about the features of the Hospital Management System, after logging in as a user he/she can add new patient records, diagnosis information, check patient information, and view information about the hospital.
+
+6-To delete a record, the user has to delete the file from the project folder as this project focuses on adding and retrieving files. 
+
+7-While adding a patient record, he/she has to provide the details which includes the name of the patient, address, contact number, age, sex, blood group, disease name and patient id number.
+
+8-Similarly, in adding diagnosis information of a particular patient then he/she has to select the respective patient’s file and provide symptoms, Diagnosis, ask admission, and ward type.
+
+9-The user can view patients history easily as which displays each and every detail of the patient.
+
 ## UML
 ![WhatsApp Image 2022-12-07 at 11 16 17 PM](https://user-images.githubusercontent.com/119473181/206452110-8ee73965-b543-4e63-811f-410a1818823d.jpeg)
 ### Output
