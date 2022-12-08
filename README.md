@@ -11,13 +11,13 @@ About Project
 
 4-This mini project contains limited features, but the essential one.
 
-5-Talking about the features of the Hospital Management System, after logging in as a user he/she can add new patient records, diagnosis information, check patient information, and view information about the hospital.
+5-Talking about the features of the Hospital Management System, after logging in as a user he/she can add new patient records, diagnosis information, check patient   information, and view information about the hospital.
 
 6-To delete a record, the user has to delete the file from the project folder as this project focuses on adding and retrieving files. 
 
-7-While adding a patient record, he/she has to provide the details which includes the name of the patient, address, contact number, age, sex, blood group, disease name and patient id number.
+7-While adding a patient record, he/she has to provide the details which includes the name of the patient, address, contact number, age, sex, blood group, disease     name and patient id number.
 
-8-Similarly, in adding diagnosis information of a particular patient then he/she has to select the respective patient’s file and provide symptoms, Diagnosis, ask admission, and ward type.
+8-Similarly, in adding diagnosis information of a particular patient then he/she has to select the respective patient’s file and provide symptoms, Diagnosis, ask     admission, and ward type.
 
 9-The user can view patients history easily as which displays each and every detail of the patient.
 
